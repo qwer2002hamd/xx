@@ -36,9 +36,11 @@ from AlexaMusic.utils.formatters import seconds_to_min
 from AlexaMusic.utils.inline.play import (panel_markup_1,
                                           panel_markup_2,
                                           panel_markup_3,
-                                          stream_markup_timer, 
                                           stream_markup,
-                                          telegram_markup)
+                                          stream_markup_timer,
+                                          telegram_markup,
+                                          telegram_markup_timer,
+                                          close_keyboard,)
 from AlexaMusic.utils.stream.autoclear import auto_clean
 from AlexaMusic.utils.thumbnails import gen_thumb
 from AlexaMusic.utils.theme import check_theme
