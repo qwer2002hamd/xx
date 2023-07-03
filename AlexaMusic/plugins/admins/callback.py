@@ -3,17 +3,29 @@ import random
 from pyrogram import filters
 from pyrogram.types import CallbackQuery, InlineKeyboardMarkup
 
-from config import (AUTO_DOWNLOADS_CLEAR, BANNED_USERS,
-                    SOUNCLOUD_IMG_URL, STREAM_IMG_URL,
-                    TELEGRAM_AUDIO_URL, TELEGRAM_VIDEO_URL, adminlist)
+from config import (
+    AUTO_DOWNLOADS_CLEAR,
+    BANNED_USERS,
+    SOUNCLOUD_IMG_URL,
+    STREAM_IMG_URL,
+    TELEGRAM_AUDIO_URL,
+    TELEGRAM_VIDEO_URL,
+    adminlist,
+)
 from AlexaMusic import YouTube, app
 from AlexaMusic.core.call import Alexa
 from AlexaMusic.misc import SUDOERS, db
-from AlexaMusic.utils.database import (is_active_chat,
-                                       is_music_playing, is_muted,
-                                       is_nonadmin_chat, music_off,
-                                       music_on, mute_off, mute_on,
-                                       set_loop)
+from AlexaMusic.utils.database import (
+    is_active_chat,
+    is_music_playing,
+    is_muted,
+    is_nonadmin_chat,
+    music_off,
+    music_on,
+    mute_off,
+    mute_on,
+    set_loop,
+)
 from AlexaMusic.utils.decorators.language import languageCB
 from AlexaMusic.utils.formatters import seconds_to_min
 from AlexaMusic.utils.inline.play import (panel_markup_1,
