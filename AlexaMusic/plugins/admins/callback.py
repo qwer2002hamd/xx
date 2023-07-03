@@ -37,6 +37,7 @@ from AlexaMusic.utils.formatters import seconds_to_min
 from AlexaMusic.utils.inline.play import (panel_markup_1,
                                           panel_markup_2,
                                           panel_markup_3,
+                                          stream_markup_timer, 
                                           stream_markup,
                                           telegram_markup)
 from AlexaMusic.utils.stream.autoclear import auto_clean
@@ -76,7 +77,7 @@ async def del_back_playlist(client, CallbackQuery, _):
     if videoid == str(None):
         buttons = telegram_markup(_, chat_id)
     else:
-        buttons = stream_markup(_, videoid, chat_id)
+        buttons = stream_markup_timer(_, videoid, chat_id, played, dur
     chat_id = CallbackQuery.message.chat.id
     try:
         await CallbackQuery.edit_message_reply_markup(
