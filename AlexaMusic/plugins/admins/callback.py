@@ -39,8 +39,7 @@ from AlexaMusic.utils.inline.play import (panel_markup_1,
                                           stream_markup,
                                           stream_markup_timer,
                                           telegram_markup,
-                                          telegram_markup_timer,
-                                          close_keyboard)
+                                          telegram_markup_timer)
 from AlexaMusic.utils.stream.autoclear import auto_clean
 from AlexaMusic.utils.thumbnails import gen_thumb
 from AlexaMusic.utils.theme import check_theme
