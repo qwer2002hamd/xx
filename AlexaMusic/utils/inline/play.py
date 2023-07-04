@@ -272,6 +272,16 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
+                text="⏮ رجوع10ثواني",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="⏭ تقدم10ثواني",
+                callback_data=f"ADMIN 2|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
                 text="⏮ رجوع30ثانيه",
                 callback_data=f"ADMIN 3|{chat_id}",
             ),
