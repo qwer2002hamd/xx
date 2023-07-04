@@ -263,15 +263,6 @@ def panel_markup_1(_, videoid, chat_id):
         ],
         [
             InlineKeyboardButton(
-                text="⇆ عشوائي ⇆",
-                callback_data=f"ADMIN Shuffle|{chat_id}",
-            ),
-            InlineKeyboardButton(
-                text="↻ تكرار ↻", callback_data=f"ADMIN Loop|{chat_id}"
-            ),
-        ],
-        [
-            InlineKeyboardButton(
                 text="🔀 عشوائي",
                 callback_data=f"ADMIN Shuffle|{chat_id}",
             ),
