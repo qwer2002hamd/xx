@@ -22,7 +22,11 @@
         "description": "Get this value from https://my.telegram.org",
         "value": "",
         "required": true
-      },
+      },  
+        "MUST_JOIN": {
+            "description": "Username of a group or channel for which you want to set force sub.(without @)",
+            "required": true      
+      }, 
       "BOT_TOKEN": {
         "description": "A Bot's token from Botfather",
         "value": "",
