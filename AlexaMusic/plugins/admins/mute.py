@@ -24,7 +24,28 @@ MUTE_COMMAND = get_command("MUTE_COMMAND")
 
 
 @app.on_message(
-    filters.command(MUTE_COMMAND) & filters.group & ~filters.edited & ~BANNED_USERS
+ filters.command(MUTE_COMMAND,"")
+    & ~filters.edited
+    & ~BANNED_USERS
+)
+@AdminRightsCheck
+async def mute_admin(cli, message: Message, _, chat_id):
+    if not len(message.command) == 1 or message.reply_to_message:
+        return await message.reply_text(_["general_2"])
+    if await is_muted(chat_id):
+        return await message.reply_text(_["admin_5"], disable_web_page_preview=True)
+    await mute_on(chat_id)
+    await Alexa.mute_stream(chat_id)
+    await message.reply_text(
+        _["admin_6"].format(message.from_user.mention), disable_web_page_preview=True
+    )
+
+
+@app.on_message(
+ filters.command(MUTE_COMMAND,"")
+    & ~filters.edited
+    & filters.channel
+    & ~BANNED_USERS
 )
 @AdminRightsCheck
 async def mute_admin(cli, message: Message, _, chat_id):
